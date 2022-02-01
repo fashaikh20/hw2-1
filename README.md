@@ -1,6 +1,6 @@
 # ENTR-451 Assignment #2
 
-Now that we know how to connect our ruby code (in a Rails app) to our SQL database, let's rewrite the previous assignment in ruby.  You'll be using the domain model from hw1 to create the database structure for "KMDB" (the Kellogg Movie Database). The end product will be a report that prints the movies and the top-billed cast for each movie in the database.
+Now that we know how to connect our ruby code (in a Rails app) to our SQL database, let's rewrite the previous assignment in ruby.  You'll be using the domain model from _[hw1](https://github.com/entr451-winter2022/hw1-solution)_ to create the database structure for "KMDB" (the Kellogg Movie Database). The end product will be a report that prints the movies and the top-billed cast for each movie in the database.
 
 ### Getting Started
 
