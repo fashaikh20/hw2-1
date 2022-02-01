@@ -1,4 +1,4 @@
-# In this assignment, you'll be using the domain model from [hw1](https://github.com/entr451-winter2022/hw1-solution)
+# In this assignment, you'll be using the domain model from hw1 (found in the hw1-solution.sql file)
 # to create the database structure for "KMDB" (the Kellogg Movie Database).
 # The end product will be a report that prints the movies and the top-billed
 # cast for each movie in the database.
