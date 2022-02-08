@@ -93,3 +93,79 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie
 # TODO!
+
+Movie.destroy_all
+
+movie1 = Movie.new
+movie1.title = "Batman Begins"
+movie1.year_released = 2005
+movie1.rated = "PG-13"
+movie1.person_id = 
+movie1.save
+
+movie2 = Movie.new
+movie2.title = "The Dark Knight"
+movie2.year_released = 2008
+movie2.rated = "PG-13"
+movie2.person_id = 
+movie2.save
+
+movie3 = Movie.new
+movie3.title = "The Dark Knight Rises"
+movie3.year_released = 2012
+movie3.rated = "PG-13"
+movie3.person_id = 
+movie3.save
+
+puts "There are #{Movie.all.count} movies."
+puts Movie.all.count
+
+person1 = Person.new
+person1.name = "Christian Bale"
+person1.save
+
+person2 = Person.new
+person2.name = "Michael Caine"
+person2.save
+
+person3 = Person.new
+person3.name = "Liam Neeson"
+person3.save
+
+person4 = Person.new
+person4.name = "Katie Holmes"
+person4.save
+
+person5 = Person.new
+person5.name = "Gary Oldman"
+person5.save
+
+person6 = Person.new
+person6.name = "Christian Nolan"
+person6.save
+
+person7 = Person.new
+person7.name = "Heath Ledger"
+person7.save
+
+person8 = Person.new
+person8.name = "Aaron Eckhart"
+person8.save
+
+person9 = Person.new
+person9.name = "Maggie Gyllenhaal"
+person9.save
+
+person10 = Person.new
+person10.name = "Tom Hardy"
+person10.save
+
+person11 = Person.new
+person11.name = "Joseph Gordon-Levitt"
+person11.save
+
+person12 = Person.new
+person12.name = "Anne Hathaway"
+person12.save
+
+#rails runner data.rb
