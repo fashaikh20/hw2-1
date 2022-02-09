@@ -98,25 +98,29 @@ Movie.destroy_all
 Person.destroy_all
 Role.destroy_all
 
+person6 = Person.new
+person6.name = "Christopher Nolan"
+person6.save
+
 movie1 = Movie.new
 movie1.title = "Batman Begins"
 movie1.year_released = 2005
 movie1.rated = "PG-13"
-movie1.person_id = 
+movie1.person_id = person6.id
 movie1.save
 
 movie2 = Movie.new
 movie2.title = "The Dark Knight"
 movie2.year_released = 2008
 movie2.rated = "PG-13"
-movie2.person_id = 
+movie2.person_id = person6.id
 movie2.save
 
 movie3 = Movie.new
 movie3.title = "The Dark Knight Rises"
 movie3.year_released = 2012
 movie3.rated = "PG-13"
-movie3.person_id = 
+movie3.person_id = person6.id
 movie3.save
 
 puts "There are #{Movie.all.count} movies."
@@ -142,9 +146,7 @@ person5 = Person.new
 person5.name = "Gary Oldman"
 person5.save
 
-person6 = Person.new
-person6.name = "Christopher Nolan"
-person6.save
+
 
 person7 = Person.new
 person7.name = "Heath Ledger"
@@ -264,6 +266,18 @@ role16.character_name = "Selina Kyle"
 role16.movie_id = Movie.where({title: "The Dark Knight Rises"})[0].id
 role16.person_id = Person.where({name: "Anne Hathaway"})[0].id
 role16.save
+
+for movie in Movie.all
+    director = Person.where({id: movie.person_id})[0]
+    puts "#{movie.title}   #{movie.year_released}   #{movie.rated}   #{director.name}"
+end
+
+
+# for role in Role.all
+#     director = Person.where({id: movie.person_id})[0]
+#     puts "#{movie.title} #{person.name} #{role.character_name}"
+# end
+
 
 
 
