@@ -95,6 +95,8 @@ puts ""
 # TODO!
 
 Movie.destroy_all
+Person.destroy_all
+Role.destroy_all
 
 movie1 = Movie.new
 movie1.title = "Batman Begins"
@@ -141,7 +143,7 @@ person5.name = "Gary Oldman"
 person5.save
 
 person6 = Person.new
-person6.name = "Christian Nolan"
+person6.name = "Christopher Nolan"
 person6.save
 
 person7 = Person.new
@@ -167,5 +169,101 @@ person11.save
 person12 = Person.new
 person12.name = "Anne Hathaway"
 person12.save
+
+
+#Create Roles Table
+#Create for Batman Begins
+role1 = Role.new
+role1.character_name = "Bruce Wayne"
+role1.movie_id = Movie.where({title: "Batman Begins"})[0].id
+role1.person_id = Person.where({name: "Christian Bale"})[0].id
+role1.save
+
+role2 = Role.new
+role2.character_name = "Alfred"
+role2.movie_id = Movie.where({title: "Batman Begins"})[0].id
+role2.person_id = Person.where({name: "Michael Caine"})[0].id
+role2.save
+
+role3 = Role.new
+role3.character_name = "Ra's al-Gul"
+role3.movie_id = Movie.where({title: "Batman Begins"})[0].id
+role3.person_id = Person.where({name: "Liam Neeson"})[0].id
+role3.save
+
+role4 = Role.new
+role4.character_name = "Rachel Dawes"
+role4.movie_id = Movie.where({title: "Batman Begins"})[0].id
+role4.person_id = Person.where({name: "Katie Holmes"})[0].id
+role4.save
+
+role5 = Role.new
+role5.character_name = "Commissioner Gordon"
+role5.movie_id = Movie.where({title: "Batman Begins"})[0].id
+role5.person_id = Person.where({name: "Gary Oldman"})[0].id
+role5.save
+
+role6 = Role.new
+role6.character_name = "Bruce Wayne"
+role6.movie_id = Movie.where({title: "The Dark Knight"})[1].id
+role6.person_id = Person.where({name: "Christian Bale"})[1].id
+role6.save
+
+role7 = Role.new
+role7.character_name = "Joker"
+role7.movie_id = Movie.where({title: "The Dark Knight"})[1].id
+role7.person_id = Person.where({name: "Heath Ledger"})[1].id
+role7.save
+
+role8 = Role.new
+role8.character_name = "Harvey Dent"
+role8.movie_id = Movie.where({title: "The Dark Knight"})[1].id
+role8.person_id = Person.where({name: "Aaron Eckhart"})[1].id
+role8.save
+
+role9 = Role.new
+role9.character_name = "Alfred"
+role9.movie_id = Movie.where({title: "The Dark Knight"})[1].id
+role9.person_id = Person.where({name: "Michael Caine"})[1].id
+role9.save
+
+role10 = Role.new
+role10.character_name = "Rachel Dawes"
+role10.movie_id = Movie.where({title: "The Dark Knight"})[1].id
+role10.person_id = Person.where({name: "Maggie Gyllenhaal"})[1].id
+role10.save
+
+
+role11 = Role.new
+role11.character_name = "Bruce Wayne"
+role11.movie_id = Movie.where({title: "The Dark Knight Rises"})[2].id
+role11.person_id = Person.where({name: "Christian Bale"})[2].id
+role11.save
+
+
+role12 = Role.new
+role12.character_name = "Commissioner Gordon"
+role12.movie_id = Movie.where({title: "The Dark Knight Rises"})[2].id
+role12.person_id = Person.where({name: "Gary Oldman"})[2].id
+role12.save
+
+role13 = Role.new
+role13.character_name = "Bane"
+role13.movie_id = Movie.where({title: "The Dark Knight Rises"})[2].id
+role13.person_id = Person.where({name: "Tom Hardy"})[2].id
+role13.save
+
+role14 = Role.new
+role14.character_name = "John Blake"
+role14.movie_id = Movie.where({title: "The Dark Knight Rises"})[2].id
+role14.person_id = Person.where({name: "Joseph Gordon-Levitt"})[2].id
+role14.save
+
+role16 = Role.new
+role16.character_name = "Selina Kyle"
+role16.movie_id = Movie.where({title: "The Dark Knight Rises"})[2].id
+role16.person_id = Person.where({name: "Anna Hathway"})[2].id
+role16.save
+
 
 #rails runner data.rb
